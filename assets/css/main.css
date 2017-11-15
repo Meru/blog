@@ -76,7 +76,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: 'Consolas', monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -131,9 +131,9 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Consolas', monospace;
   /* 1 */
-  font-size: 1em;
+  font-size: 0.9em;
   /* 2 */
 }
 
@@ -727,7 +727,7 @@ template {
 
 html {
   line-height: 1.5;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Arial', 'Meiryo UI', 'Malgun Gothic', sans-serif;
 }
 
 @media screen and (min-width: 500px) {
@@ -846,7 +846,7 @@ pre code {
 }
 
 .sidebar-logo .logo {
-  font-family: 'Finger Paint', cursive;
+  font-family: 'Nico Moji', cursive;
   color: #975435;
   text-transform: uppercase;
   text-decoration: none;
@@ -897,7 +897,7 @@ pre code {
   padding: 1rem;
 }
 .main-article .title-article, .main-article .page-title, .main-article .post-title, .page-article .title-article, .page-article .page-title, .page-article .post-title, .post .title-article, .post .page-title, .post .post-title {
-  font-family: 'Finger Paint', cursive;
+  font-family: 'Cabin Sketch', 'Meiryo UI', 'Malgun Gothic', cursive;
   margin-bottom: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -912,7 +912,7 @@ pre code {
 .main-article .post-date span, .main-article .page-date span, .page-article .post-date span, .page-article .page-date span, .post .post-date span, .post .page-date span {
   font-size: 0.8rem;
   text-transform: uppercase;
-  font-family: monospace;
+  font-family: 'Consolas', monospace;
   color: #D4AC9A;
 }
 .main-article .more, .page-article .more, .post .more {
