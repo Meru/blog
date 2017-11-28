@@ -19,7 +19,7 @@
 					<description>{{ post.content | xml_escape }}</description>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{{ site.url | xml_escape}}{{ post.url | xml_escape}}</link>
+				<link>{{ site.url | xml_escape}}{{ post.url | prepend: site.baseurl | xml_escape}}</link>
 				<guid isPermaLink="true">{{ site.url | xml_escape}}{{ post.url | xml_escape}}</guid>
 			</item>
 		{% endfor %}
