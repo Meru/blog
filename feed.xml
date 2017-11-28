@@ -8,6 +8,7 @@
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
 		{% for post in site.posts %}
+		{% unless post.hidden %}
 			<item>
 				<title>{{ post.title | xml_escape}}</title>
 				{% if post.author.name %}
@@ -22,6 +23,7 @@
 				<link>{{ site.url | xml_escape}}{{ post.url | prepend: site.baseurl | xml_escape}}</link>
 				<guid isPermaLink="true">{{ site.url | xml_escape}}{{ post.url | xml_escape}}</guid>
 			</item>
+		{% endunless %}
 		{% endfor %}
 	</channel>
 </rss>
