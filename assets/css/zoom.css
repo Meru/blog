@@ -13,7 +13,7 @@ img.zoom-img {
 .zoom-overlay {
   cursor: zoom-out;
   z-index: 420;
-  background: #fff;
+  background: #fff0;
   position: fixed;
   top: 0;
   left: 0;
