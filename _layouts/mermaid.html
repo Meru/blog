@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
+	<meta name="description" content="{{ page.description }}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link href="{{ "/feed.xml" | prepend: site.baseurl }}" type="application/rss+xml" rel="alternate" title="Feed">
+	<link rel="shortcut icon" href="{{ "/assets/img/favicon/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
+	<link rel="apple-touch-icon" href="{{ "/assets/img/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/favicon/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/img/favicon/apple-touch-icon-114x114.png" | prepend: site.baseurl }}">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#2d2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2d2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/assets/css/zoom.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/assets/css/mermaid.css" | prepend: site.baseurl }}">
+</head>
+<body>
+
+  {% include sidebar.html %}
+
+  <main role="main">
+    <div class="content">
+        <article class="page-article">
+          <div class="wrap-content">
+            <header class="page-header">
+              <h1 class="page-title">{{page.title}}</h1>
+              <div class="page-date"><span>{{page.date | date: '%B %d, %Y'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            </header>
+            <div class="page-content">
+              {% if page.img %}
+              <img class="page-img" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}" data-action="zoom">
+              {% endif %}
+              {{page.content | markdownify}}
+            </div>
+            {% include disqus.html %}
+          </div>
+        </article>
+    </div>
+  </main>
+
+<script src="{{ "/assets/js/zoom-vanilla.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/mermaid.min.js" | prepend: site.baseurl }}"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>

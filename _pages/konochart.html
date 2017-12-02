@@ -1,0 +1,51 @@
+---
+layout: mermaid
+title: "Experimental Rendered Flowchart"
+permalink: /kono-flowchart/
+---
+
+<div class="mermaid">
+graph TD
+id01[CO1_001..013] --> |Go ahead with Kotori|id02[CO1_013_A]
+id01 --> |Wait for Ageha|id03[CO1_013_B]
+id02 --> id04{CO1_013_C<br/>CO1_014..016}
+id03 --> id04
+id04 --> id05[CO1_016_A]
+id05 --> |I like you|id06[CO1_016_B]
+id05 --> |No, it's different|id07[CO1_016_C]
+id06 --> id08[CO1_016_D]
+id07 --> id08
+id08 --> id09[CO1_016_E]
+id02 --> id09
+id09 --> id10{CO1_017..018}
+id10 --> |Kotori|id11[CO1_018_A]
+id10 --> |Ageha|id12[CO1_018_B]
+id10 --> |Amane|id13[CO1_018_C]
+id10 --> |Neither of them|id14[CO1_018_D]
+id11 --> id15{CO1_018_E<br/>CO1_019..020}
+id12 --> id15
+id13 --> id15
+id14 --> id15
+id15 --> |Kotori|id16[CO1_020_A]
+id15 --> |Ageha|id17[CO1_020_B]
+id15 --> |Amane|id18[CO1_020_C]
+id15 --> |Me|id19[CO1_020_D]
+id16 --> id20{CO1_020_E<br/>CO1_021}
+id17 --> id20
+id18 --> id20
+id19 --> id20
+id20 --> id21>CO1_021_A<br/>AMA_001..010]
+id20 --> id22{CO1_021_B<br/>CO2_001..005}
+id22 --> |Go together with Ageha|id23[CO2_005_A]
+id22 --> |Go home together with Kotori|id24[CO2_005_B]
+id22 --> |Go to Asa|id25[CO2_005_C]
+id23 --> id26[CO2_005_D]
+id24 --> id26
+id25 --> id26
+id26 --> id27>KOT_001..009]
+id26 --> id30{HUT_001..003}
+id26 --> id28>AGE_001..012]
+id26 --> id29[CO2_999]
+id30 --> |Choose Asa|id31>ASA_001..005]
+id30 --> |Don't choose either|id32>YOR_001..008]
+</div>
