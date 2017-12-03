@@ -895,6 +895,24 @@ pre code {
   margin-left: 22rem;
   margin-right: 2rem;
   padding: 2rem 1rem;
+  animation-duration: 500ms;
+  animation-name: fade-in;
+  animation-fill-mode: forwards
+}
+
+@keyframes fade-in {
+    from {
+        transform: translateY(-1rem);
+        opacity: 0
+    }
+    50% {
+        transform: translateY(-0.5rem);
+        opacity: 0
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
 }
 
 .main-article, .page-article, .post {
